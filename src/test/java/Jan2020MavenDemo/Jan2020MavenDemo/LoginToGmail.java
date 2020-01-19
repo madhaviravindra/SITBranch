@@ -14,6 +14,8 @@ public class LoginToGmail
 		driver.get("https://accounts.google.com/");
 		driver.manage().window().maximize();
 		LoginToGmail();
+		
+		// here i have done some modification
 	}
 	public static void LoginToGmail() throws InterruptedException
 	{
