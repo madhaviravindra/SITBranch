@@ -3,10 +3,12 @@ package Jan2020MavenDemo.Jan2020MavenDemo;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class LoginToGmail 
 {
 	public static WebDriver driver;
+
 	public static void Setup() throws InterruptedException
 	{
 		System.setProperty("webdriver.chrome.driver","D:\\D-Drive\\Softwares\\chromedriver.exe");
@@ -17,6 +19,7 @@ public class LoginToGmail
 		
 		// here i have done some modification
 	}
+
 	public static void LoginToGmail() throws InterruptedException
 	{
 		driver.findElement(By.name("identifier")).sendKeys("kasaragadda.ravindrababu@gmail.com");
@@ -26,7 +29,8 @@ public class LoginToGmail
 		driver.findElement(By.id("passwordNext")).click();	
 		driver.close();
 	}
-	public static void main(String[] args) throws InterruptedException 
+	@Test
+	public void testgmail() throws InterruptedException
 	{
 		Setup();
 	}
